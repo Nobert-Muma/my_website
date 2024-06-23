@@ -1,0 +1,287 @@
+body {
+    background-color: #2F3835;
+    color: white;
+}
+  
+
+h1 {
+    font-weight: 800;
+    font-size: clamp(48px, 64px, 72px);
+}
+
+h2 {
+    font-weight: 600;
+    font-size: clamp(40px, 48px, 56px);
+}
+
+h3 {
+    font-weight: 400;
+    font-size: clamp(32px, 40px, 48px);
+}
+
+.educlass {
+    font-weight: 200;
+    font-size: clamp(16px, 24px, 32px);
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+#image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+figcaption {
+    text-align: center;
+}
+p {
+    font-weight: 400;
+    font-size: clamp(16px, 24px, 32px);
+}
+
+div {
+    justify-content: center;
+    align-items: center;
+}
+#nav-section,
+#h1-section,
+#footer-section {
+    background-color: rgba(0,0 green,0 blue,0.338 alpha); 
+    color: white; 
+}
+  
+  
+  
+a {  
+    color: #47BFBD; 
+    text-decoration: none;  
+    transition: color 0.2s ease-in-out; 
+}
+  
+a:hover {  
+    color: #2980B9; 
+}
+  
+  
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 6px;
+}
+
+
+.main-content {  
+    display: grid;
+    grid-template-rows: auto min-content 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr;  
+    grid-template-areas:
+    "nav-section nav-section"
+    "h1-section h1-section"
+    "embed-section para-section"
+    "footer-section footer-section";
+    padding: 2rem;
+    grid-gap: 1 rem;
+}
+      
+#embed-section {
+    grid-column-start: 1;
+    grid-column-end: 2;  
+    padding: 2rem;
+    margin: 0 auto;
+}
+      
+#para-section {
+    grid-column-start: 2;
+    grid-column-end: 2;  
+    padding: 2rem;
+    margin: 1 rem 0;
+}
+      
+
+
+#nav-section {
+    grid-area: nav-section;
+    padding: 2rem;
+    margin: 0 auto;
+    display: flexbox;
+}
+#h1-section {
+    grid-area: h1-section;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+#footer-section {
+    grid-area: footer-section;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+
+.resume {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr;  
+    grid-template-areas:        
+     "about-Nobert about-Nobert"
+     "image education-background"
+     "footer-section1 footer-section1";
+   padding: 2rem;
+   grid-gap: 1 rem;
+}
+
+#about-Nobert {
+    grid-area: about-Nobert;
+    padding: 2rem;
+    margin: 0 auto;
+ }
+
+#education-background {
+    grid-area: education-background;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+#footer-section1 {
+    grid-area: footer-section1;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+
+#contact-me {
+    text-align: center;
+}
+
+#contact-me1 {
+    text-align: center;
+}
+
+.contact-list {
+    justify-content:space-evenly;
+}
+
+#footer-section2 {
+    text-align: center;
+}
+
+
+
+@media only screen and (max-width:600px){
+    /* body{
+         background-color: chartreuse;
+     } */
+     .main-content {
+         display: grid;
+     /* 1. Define rows */
+     /* 2. Define what grid area you want to be seen on the row */
+     grid-template-areas: 
+         'nav-section nav-section'
+         'embed-section embed-section'
+         'embed-section embed-section'
+         'para-section para-section'
+         'footer-section footer-section'
+         ;
+     }
+ }
+
+
+
+
+
+fieldset {
+    margin: 2em 0;
+    padding: 1em 2em;
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    min-width: 200px;
+}
+
+legend {
+    font-size: 1.25em;
+    padding: 0 .25;
+    color: #ffffffea;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+label:first-of-type {
+    margin-top: 0;
+}
+
+input {
+    padding: .5em;
+    border: solid 1px #ffffffea;
+}
+
+input[type="text"], input[type="email"] {
+    width: 15em;
+}
+
+textarea {
+    min-height: 8em;
+    min-width: 100%;
+    padding: .5em;
+    border: solid 1px #ffffffea;
+}
+
+input[type="submit"] {
+    padding: .5em 1em;
+    border-radius: 6px;
+    background-color: #47BFBD;
+    color: #fff;
+    font-family: Geist;
+    font-size: .8em;
+    font-weight: bolder;
+}
+
+input[type="reset"] {
+    padding: .5em 1em;
+    border-radius: 6px;
+    background-color: #FF9A33;
+    color: #fff;
+    font-family: Geist;
+    font-size: .8em;
+    font-weight: bolder;
+}
+
+@media  screen and (min-width: 430px) {
+    legend {
+        font-size: 1.75em;
+    }
+    fieldset {
+        width: 40%;
+        min-width: 320px;
+        margin: auto;
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto min-content 1fr 1fr auto;
+        grid-template-areas:
+        "nav-section"
+        "h1-section"
+        "embed-section"
+        "para-section"
+        "footer-section";
+    }
+}
+  
+  
+  
+  
+  
