@@ -1,7 +1,6 @@
 const copyText=document.getElementById("copyable-text");
 copyText.addEventListener("click", function() {
     const textToCopy=copyText.textContent;
-    // to store the original text
     const originalText=textToCopy;
     if(navigator.clipboard) {
         navigator.clipboard.writeText(textToCopy).then(()=>{
